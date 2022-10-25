@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DeleteButton from 'components/atoms/DeleteButton/DeleteButton';
 import {Wrapper}  from './UsersListItem.styles.js'
+import { useGlobalContext } from 'providers/UserProvider';
 
-const UsersListItem = ({deleteUser, userData: {average, name, attendances = 'Nothing to Display'}}) => {
 
-    // const {average, name, attendances} = userData;
+const UsersListItem = ({userData: {average, name, attendances = 'Nothing to Display'}}) => {
+    const {deleteUser} = useGlobalContext()
 
     return (
         <Wrapper>

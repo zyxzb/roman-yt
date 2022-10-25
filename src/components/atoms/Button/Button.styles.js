@@ -8,7 +8,7 @@ export const Button = styled.button `
   background-color: ${({ theme }) => theme.colors.lightPurple};
   border-radius: 20px;
   border: none;
-  width: 50%;
+  width: 100%;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkGrey};
   transition: all ease-in-out 0.2s;
