@@ -1,8 +1,8 @@
 import React from 'react';
 import { TitleStyles } from './Title.styles';
 
-const Title = () => {
-    return <TitleStyles>Add New Student</TitleStyles>
+const Title = ({title, dimensions}) => {
+    return <TitleStyles>{title}{dimensions && ` ${dimensions}px` }</TitleStyles>
 }
 
 export default Title;

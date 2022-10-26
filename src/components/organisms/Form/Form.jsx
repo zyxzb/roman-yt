@@ -4,6 +4,7 @@ import FormField from 'components/molecules/FormField/FormField';
 import { Button } from 'components/atoms/Button/Button.styles';
 import Title from 'components/atoms/Title/Title';
 import { useGlobalContext } from 'providers/UserProvider';
+// import { useWindowHeight } from 'hooks/useWindowSize';
 
 const initialValues = {
     name: '',
@@ -40,7 +41,8 @@ const reducer = (state, action) => {
 const Form = () => {
     const [formValues, dispatch] = useReducer(reducer, initialValues);
     const {handleAddUser} = useGlobalContext();
-    
+    // const dimensions = useWindowHeight()
+
     const handleInputChange = (e) => {
         dispatch({
             type: 'INPUT_CHANGE',
@@ -66,7 +68,9 @@ const Form = () => {
 
     return (
         <FormContainer onSubmit={handleSubmitUser}>
-            <Title/>
+            <Title title='Add New Student'/>
+            {/* <Title title='Screen width:' dimensions={dimensions.width}/>
+            <Title title='Screen height:' dimensions={dimensions.height}/> */}
             <FormField label='Name' id='name' name='name' value={formValues.name} onChange={handleInputChange}/>
             <FormField label='Attendance' id='attendance' name='attendance' value={formValues.attendance} onChange={handleInputChange}/>
             <FormField label='Average' id='average' name='average' value={formValues.average} onChange={handleInputChange}/>
