@@ -5,7 +5,7 @@ const users = [
 ]
 
 it('Adds two values', () => {
-    expect(add(2, 4)).toBe(6)
+    expect(add(2, 4)).toBe(6);
 })
 
 it('compares two values', () => {

@@ -9,5 +9,10 @@ label{
     margin: 20px 0 8px;
     font-size: 14px;
 }
-
+#consent{
+    align-self: flex-start;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
 `
