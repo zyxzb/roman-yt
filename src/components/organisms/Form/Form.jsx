@@ -74,7 +74,7 @@ const Form = () => {
             <FormField label='Name' id='name' name='name' value={formValues.name} onChange={handleInputChange}/>
             <FormField label='Attendance' id='attendance' name='attendance' value={formValues.attendance} onChange={handleInputChange}/>
             <FormField label='Average' id='average' name='average' value={formValues.average} onChange={handleInputChange}/>
-            <FormField label='Consent' id='consent' name='consent' type='checkbox' value={formValues.average} onChange={() => dispatch({type: 'CONSENT_TOGGLE'})}/>
+            <FormField label='Consent' id='consent' name='consent' type='checkbox' data-testid='Consent' value={formValues.average}  onChange={() => dispatch({type: 'CONSENT_TOGGLE'})}/>
             <Button type='submit'>Zapisz</Button>
             {formValues.error && <p>{formValues.error}</p>}
         </FormContainer>

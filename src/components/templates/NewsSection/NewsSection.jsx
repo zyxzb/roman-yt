@@ -24,6 +24,7 @@ const NewsSection = () => {
     const [error, setError] = useState('');
 
    useEffect(() => {
+    console.log(articles);
     axios
     .post(
       'https://graphql.datocms.com/',
@@ -39,7 +40,7 @@ const NewsSection = () => {
     .then(({data: {data}}) => {
         setArticles(data.allArticles)
     })
-    .catch((err) => {
+    .catch(() => {
         setError('Error, please try again 😥')
     });
    },[]);

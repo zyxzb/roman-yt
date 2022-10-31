@@ -12,10 +12,10 @@ const Navigation = () => {
                     Buddy
                 </h1>
             </Logo>
-            <NavLink to="/" end>Home</NavLink>
+            <NavLink to="group">Home</NavLink>
             <NavLink to="addUser">Add User</NavLink>
-            <NavLink to="settings">Settings</NavLink>
-            <NavLink to="logout">Logout</NavLink>
+            <NavLink to="settings" style={{opacity: 0.6, pointerEvents:'none'}}>Settings</NavLink>
+            <NavLink to="logout" style={{opacity: 0.6, pointerEvents:'none'}}>Logout</NavLink>
         </Nav>
     );
 }

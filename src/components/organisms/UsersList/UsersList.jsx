@@ -5,7 +5,7 @@ import { useGlobalContext } from 'providers/UserProvider';
 
 const UsersList = () => { 
     const {users} = useGlobalContext();
-
+    
     return (
         <>
         <Wrapper>

@@ -19,15 +19,4 @@ export const Wrapper = styled.div `
         color: ${({theme}) => theme.colors.darkGrey};
         background-color: ${({theme}) => theme.colors.lightGrey};
     }
-    &::-webkit-scrollbar{
-        width: 1em;
-    }
-    &::-webkit-scrollbar-track{
-        -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
-
-    }
-    &::-webkit-scrollbar-thumb{        
-        background-color: ${({theme}) => theme.colors.darkPurple};
-        border-radius: 15px;
-    }
 `
